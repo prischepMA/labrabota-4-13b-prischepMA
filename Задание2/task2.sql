@@ -1,0 +1,11 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS "myemployees" (id integer primary key, firstname text, lastname text, email text, birthday text, height real, weight real, department_id integer);
+INSERT INTO myemployees VALUES(1,'Maksim','Prischep','ya.pryshchep@yandex.by','05.09.1999',170.0,80.0,1);
+INSERT INTO myemployees VALUES(2,'Dima','Gavrushko','gavryshko@gmail.com',NULL,90.0,90.0,1);
+INSERT INTO myemployees VALUES(3,'Nick','Nickiforov','nick@gmail.com',NULL,170.0,80.0,2);
+INSERT INTO myemployees VALUES(6,'Andry','Nickolson','nick_and@gmail.com',NULL,170.0,80.0,2);
+CREATE TABLE department(id integer primary key, dep_name text);
+INSERT INTO department VALUES(1,'first_dep');
+INSERT INTO department VALUES(2,'second_dep');
+COMMIT;
